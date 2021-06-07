@@ -1,0 +1,69 @@
+<div class="filtrar_atendimentos"><ion-row class="ion-margin-top ion-margin-start">
+ 
+  <ion-col size="10" class="filter">
+    <div class="tituloc" >Atendimentos <b>|</b> 15 dias</div>
+    <div class="data">01 de junho de 2021</div>
+  </ion-col>
+  <ion-col size="2" >
+    <div class="{{divlistarAtendimentos == true ? 'ordernar' : 'ordernar_falso' }}"><div class="dots" (click)="clickListarAtendimentos()"></div></div>
+  </ion-col>
+</ion-row>
+</div>
+<div *ngIf="divlistarAtendimentos" class="divlistarAtendimentos">
+  <div class="titulo">Exibir o total para:</div>
+  <div class="elemento"><div class="icone"><i *ngIf="listarData == 'hoje'" class="fas fa-check"></i></div><div class="data">Hoje</div></div>
+  <div class="elemento"><div class="icone"><i *ngIf="listarData == '7dias'" class="fas fa-check"></i></div><div class="data">7 dias</div></div>
+  <div class="elemento"><div class="icone"><i *ngIf="listarData == '15dias'" class="fas fa-check"></i></div><div class="data">15 dias</div></div>
+  <div class="elemento"><div class="icone"><i *ngIf="listarData == '30dias'" class="fas fa-check"></i></div><div class="data">30 dias</div></div>
+</div>
+<!-- <ion-card *ngFor="let data of atendimentos let i = index">
+  {{data.categorias}}
+</ion-card> -->
+<div class="secoes_atendimentos">
+  <ion-row class="ion-margin">
+    <div class="secao_atendimento" (click)="irPagina('/minha_lista/em_andamento')">
+      <ion-row >
+        <ion-col size="8">
+      <div class="tipo">Em Andamento</div></ion-col>
+      <ion-col size="3">
+        <div class="contagens">
+        <div *ngIf="filtrarAtendimentos('em_andamento') > 0" class="contagem contagem_verde">{{ filtrarAtendimentos('em_andamento') }}</div>
+      </div>
+    </ion-col>
+      <ion-col size="1">
+      <div class="icone"><div class="seta seta-direita"></div></div></ion-col>
+      
+      </ion-row>
+    </div>
+    <div class="secao_atendimento"  (click)="irPagina('/minha_lista')">
+      <ion-row>
+        <ion-col size="6">
+      <div class="tipo">Minha Lista</div></ion-col>
+      <ion-col size="5">
+        <div class="contagens">
+        <div *ngIf="filtrarAtendimentos('em_espera') > 0" class="contagem contagem_azul">{{ filtrarAtendimentos('em_espera') }}</div>
+        <div *ngIf="filtrarAtendimentos('em_atraso') > 0" class="contagem contagem_vermelho">{{ filtrarAtendimentos('em_atraso') }}</div></div>
+    </ion-col>
+      <ion-col size="1">
+        <div class="icone"><div class="seta seta-direita"></div></div></ion-col>
+      
+      </ion-row>
+    </div>
+
+    <div class="secao_atendimento" (click)="irPagina('/minha_lista/finalizado')">
+      <ion-row>
+        <ion-col size="6">
+      <div class="tipo">Realizados</div></ion-col>
+      <ion-col size="5">
+        <div class="contagens">
+        <div *ngIf="filtrarAtendimentos('finalizado') > 0" class="contagem contagem_cinza">{{ filtrarAtendimentos('finalizado') }}</div>
+        <div *ngIf="filtrarAtendimentos('nao_concluido') > 0" class="contagem contagem_laranja">{{ filtrarAtendimentos('nao_concluido') }}</div>
+      </div>
+    </ion-col>
+      <ion-col size="1">
+        <div class="icone"><div class="seta seta-direita"></div></div></ion-col>
+      
+      </ion-row>
+    </div>
+  </ion-row>
+</div>

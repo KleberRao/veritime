@@ -1,0 +1,75 @@
+<ion-row>
+  <ion-col size="12" class="ion-padding-top ion-padding-bottom">
+    <div class="titulo_cabecalho">
+        CHECK-OUT
+    </div>
+  </ion-col>
+</ion-row>
+
+<div *ngIf="atendimento" class="container ion-padding-start ion-padding-end">
+  
+  <div class="informacoes_widget">
+    <ion-row>
+      <span>
+       Status
+      </span>
+   
+    </ion-row>
+  </div>
+  <div class="widget informacoes">
+    <div *ngIf="atendimento" class="referencias">
+    <div class="form_observacoes">
+      <select>
+        <option>Status do atendimento</option>
+      </select>
+      
+    </div>
+  </div>
+  </div>
+
+  <div class="informacoes_widget">
+    <ion-row>
+      <span>
+       Enviar para o cliente
+      </span>
+   
+    </ion-row>
+  </div>
+  <div class="widget informacoes">
+    <div *ngIf="atendimento" class="referencias">
+    <div class="form_sendcliente">
+      <div class="cont">
+      
+        <div class="opcao">
+        <div class="input"><input type="checkbox"></div>
+        <div class="texto">Observações da visita</div>
+      </div> 
+      <div class="divisor"></div>
+      <div class="opcao">
+      <div class="input"><input type="checkbox"></div>
+      <div class="texto">Relatório</div>
+    </div> 
+
+      
+    </div>
+  </div>
+</div>
+</div>
+
+  
+  <div class="informacoes_widget">
+    <ion-row>
+      <span>
+       Assinatura do Cliente
+      </span>
+   
+    </ion-row>
+  </div>
+  <div class="widget informacoes">
+  <div *ngIf="atendimento" class="referencias">
+    <div class="btn_assinatura">COLETAR ASSINATURA</div>  
+  </div>  </div>
+
+
+  <div class="btn_confirmar"><i class="fas fa-check-double"></i> CONFIRMAR ASSINATURA</div>  
+</div>

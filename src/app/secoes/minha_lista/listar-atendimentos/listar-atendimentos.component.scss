@@ -1,0 +1,290 @@
+.data_listagem{
+    padding-top:5px;
+    font-weight: 500;
+    color:#131313;
+    margin-left: -15px;
+}
+
+.filtro_data{
+    display:inline-flex;
+    float:right;
+}
+
+.filtro_data .quantidade{
+    border-radius: 20px;
+    background-color:#F16F6F;
+    height:30px;
+    padding-top:7px;
+    width:30px;
+    margin-right:5px;
+    color:white;
+    font-size:14px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.filtro_data .icone{
+    padding-top:5px;
+    color:#F16F6F;
+    float:right;
+    right:0px;
+}
+
+.atendimento{ 
+    margin-bottom:10px;
+    border-radius: 3px;
+    padding:10px;
+    padding-top:2px;
+    width:100%;
+    margin:0 auto;
+    line-height:55px;
+    background-color:white;
+    -webkit-box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.17);
+    -moz-box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.17);
+    box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.17);
+    margin-bottom:20px;
+}
+
+.atendimento .c_atendimento{
+    margin-top:10px;
+    padding-left:12px;
+    line-height: normal;
+    color:#87c289;
+}
+
+.atendimento .c_atendimento .tempo_atendimento .tempo{
+    display:inline-flex;
+    font-size:17px;
+    font-weight: 400;
+}
+
+.atendimento .c_atendimento .tempo_atendimento .tempo .icone{
+    width:25px;
+    height:20px;
+
+}
+
+.atendimento .c_atendimento .tempo_atendimento .data{
+    margin-left:25px;
+    font-size:12px;
+    font-weight: 300;
+}
+
+.badge{
+    background-color:#43a047;
+    font-size:12px;
+    text-align: center;
+    border-radius: 10px;
+    color:#ffffff;
+    padding:4px 14px 4px 14px;
+    float:left;
+}
+.bgverde{
+    background-color:#43a047;
+    color:#ffffff;
+}
+.bgazul{
+    background-color:#0388c8;
+    color:#ffffff;
+}
+
+.bgvermelho{
+    background-color:#f44336;
+    color:#ffffff;
+}
+
+.cont_titulo {
+    position: relative;
+    display:inline-flex;
+    width:100%;
+}
+
+.cont_titulo .titulo{
+    width:98%;
+    color:#6b6b6b;
+    font-weight: 500;
+    padding-top:10px;
+   
+}
+.cont_titulo .icone{
+    right:0px;
+    margin-top:5%;
+    float:right;
+    justify-content:center;
+    vertical-align: middle;
+    height:100%;
+}
+
+.atendimento .c_atendimento .nome_cliente{
+    margin-top:8px;
+    font-weight: 300;
+    color:#6b6b6b;
+}
+
+.divisor{
+    margin-top:10px;
+    margin-bottom: 12px;
+    position: relative;
+    width: 88%;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.distancia{
+    display:inline-flex;
+    font-size:14px;
+    color:#2497f3;
+}
+
+.distancia span{
+    margin-left:10px;
+    color:#6b6b6b;
+}
+
+
+.ca_borda_verde{
+    border-left: 4px solid #43a047;
+}
+.ca_borda_vermelho{
+    border-left: 4px solid #f44336;
+}
+.ca_borda_azul{
+    border-left: 4px solid #0388c8;
+}
+
+
+.ca_borda_cinza{
+    border-left: 4px solid gray;
+}
+
+//LISTAGEM VERDE
+.ca_borda_verde .tempo_atendimento{
+    color:#43a047;
+}
+.ca_borda_verde .tempo_atendimento{
+    color:#43a047;
+}
+
+
+//LISTAGEM VERMELHA
+.ca_borda_vermelho .tempo_atendimento{
+    color:#f44336;
+}
+
+//LISTAGEM AZUL
+.ca_borda_azul .tempo_atendimento{
+    color:#0388c8;
+}
+
+
+
+//LISTAGEM CINZA
+.ca_borda_cinza .tempo_atendimento{
+    color:gray;
+}
+
+.check{
+    display:inline-flex;
+    color:#6b6b6b;
+    font-size:13px;
+    font-weight: 400;
+    padding-bottom:10px;
+    width:100%;
+}
+.check .icone .fa-clock{
+    
+    color:#6b6b6b;
+}
+
+.check .icone{
+    padding-right:12px;
+    color:green;
+    font-size:16px;
+}
+
+.check .texto{
+    padding-right:30px;
+    font-weight: 500;
+}
+
+.check .descricao{
+    font-weight: 300;
+}
+
+.check_opacidade{
+    opacity: 0.4;
+}
+
+.check_opacidade .icone {
+    color:#6b6b6b;
+}
+
+.lista_contato .icone{
+    color:#5D5D5D;
+    font-size:16px;
+}
+
+.lista_contato .texto{
+    font-weight: 300;;
+    font-size:15px;
+}
+.qntcontatos{
+    padding:3px;
+    background-color:#D9D9D9;
+    color:#6C6C6C;
+    border-radius: 3px;
+    padding-left:6px;
+    padding-right: 6px;
+}
+
+.lista_sla .icone{
+    color: #6b6b6b;
+    font-size:13px;
+    padding-top:1.7px;
+}
+
+.lista_sla .texto{
+    font-size:15px;
+    font-weight: 300;
+}
+.lista_sla .lista_sla_categorias {
+    display:inline-flex;
+}
+.lista_sla .lista_sla_categorias .categoria{
+    border-radius:10px;
+    padding:5px;
+    font-size:12px;
+    height:auto;
+    background-color:#E7E7E7;
+    color:#8A8A8A;
+    margin-right:3px;
+}
+
+.atendimento_checkout{
+    padding:0px;
+    color:white;
+    background-color: #B6B6B6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    display:inline-flex;
+    width:100%;
+    padding-left:15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    
+}
+
+.atendimento_checkout .icone{
+    font-size:15px;
+    margin-right:10px;
+}
+.atendimento_checkout .texto{
+    text-align: center;
+    font-size:15px;
+    font-weight: 300;
+}
+
+
+.tituloc {
+    color:#505050;
+}

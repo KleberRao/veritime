@@ -1,0 +1,110 @@
+<ion-content class="background">
+
+  <ion-grid class="ion-no-padding cabecalho">
+    <!-- Cabeçalho -->
+    <ion-row>
+      <ion-col size="12">
+      <div style="background-color: #cff143;height:2px;width:100%;"></div>
+      <div style="background-color: #cbcbcb;width:100%;-webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.11);
+      -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.11);
+      box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.35);padding-top:10px;padding-bottom: 6px;" class="ion-padding-start ion-padding-end" >
+     <div>
+     <ion-row >
+        <ion-col size="1" style="padding-top:8px;" (click)="voltarAtras()">
+        <i class="fas fa-chevron-left"></i>
+        </ion-col>
+        <ion-col size="7">
+          <div class="page_title">jornada de Trabalho</div>
+        </ion-col>
+      </ion-row></div>
+    </div>
+    </ion-col>
+    </ion-row>
+    
+    <div class="container ion-padding-start ion-padding-end ion-padding-top">
+      <div class="saudacao">
+        Olá <b>Kleber</b>, boa tarde!
+        <br>
+        Está é a sua jornada de trabalho atual
+      </div>
+      <ion-row>
+        <ion-col size="12">
+          <div class="jornada">
+        <ion-row>
+          <ion-col size="5" >
+            <div class="data">30/04/2021</div>
+            <div class="dia">Sexta-feira</div>
+          </ion-col>
+          <ion-col size="7">
+            <div class="contador"><h1>00:00</h1><small>00</small></div>
+          </ion-col>
+        </ion-row>
+        <div class="jornada_tempodia" class="ion-padding-start">
+          <ion-row>
+            <ion-col size="12" ><div class="jtd"><i class="far fa-clock"></i> <span>08:00 - 18:30</span></div></ion-col>
+            <ion-col>
+              <div class="iniciar_jornada"><i class="fas fa-play"></i> INICIAR JORNADA</div>
+            </ion-col>
+          </ion-row>
+        </div>
+
+        <div class="divisor"></div>
+        <div class="jornada_tempodia" class="ion-padding-start">
+          <ion-row>
+            <ion-col size="12" ><div class="jtd"><i class="far fa-play-circle"></i> <span>Almoço</span></div></ion-col>
+            <ion-col size="12" ><div class="jtd" style="margin-left:25px;font-weight:400;">12:30 - 13:30</div></ion-col>
+            <ion-col>
+              <div class="iniciar_jornada_intervalo"><i class="fas fa-play"></i> INICIAR</div>
+            </ion-col>
+          </ion-row>
+        </div>
+
+        
+        <div class="divisor"></div>
+        <div class="jornada_tempodia" class="ion-padding-start">
+          <ion-row>
+            <ion-col size="12" ><div class="jtd"><i class="far fa-play-circle"></i> <span>Lanche</span></div></ion-col>
+            <ion-col size="12" ><div class="jtd" style="margin-left:25px;font-weight:400;">15:30 - 16:00</div></ion-col>
+            <ion-col>
+              <div class="iniciar_jornada_intervalo"><i class="fas fa-play"></i> INICIAR</div>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+       </ion-col>
+    </ion-row>
+
+    <div class="informacoes_widget">
+      <ion-row>
+        <ion-col size="8"><span>Local da Jornada</span></ion-col>
+        <ion-col size="1" offset="3">
+          <i class="fas fa-chevron-up"></i></ion-col>
+      </ion-row>
+    </div>
+    <div class="widget informacoes">
+      <div  class="referencias">
+      <ion-row>
+        <ion-col size="10" offset="1">
+          <div style="font-weight: 500;font-size:18px;">Nome do Cliente</div>
+            <div class="local">
+          <div class="conteudo">
+            <div class="endereco"><i class="fas fa-map-marker"></i> Endereço</div>
+
+            <div class="como_chegar">
+              <div class="btn_comochegar"><div class="btn"><div class="icone"><i class="fas fa-directions"></i></div> <div class="texto">VER COMO CHECAR</div></div></div>
+            </div>
+          </div></div>
+        </ion-col>
+      </ion-row>
+      <div class="divisor"></div>
+    </div></div>
+    
+  </div>
+    
+
+    <div class="btn_jornadafinalizadas">JORNADAS FINALIZADAS</div>
+
+    <div class="final_page" style="height:100px;width:100%;"></div>
+    <app-menu></app-menu>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,13 @@
+{
+  "name": "veritime",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/sincronizacao",
+      "proxyUrl": "https://veritime.com.br/veritime3/api"
+    }
+  ]
+}

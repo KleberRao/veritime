@@ -1,0 +1,504 @@
+ion-content.background{
+    --ion-background-color:#e1e1e1;
+  }
+
+.page_title{
+  font-size:18px;
+  font-weight: 500;
+  color:#1b1b1b;
+  margin-top:8px;
+  margin-bottom:10px;
+}
+.cabecalho{
+    margin-bottom: 15px;;
+}
+
+.cabecalho i{
+  color:#363636;
+}
+
+
+
+.titulo_cabecalho{
+    padding-left:15px;
+    background-color: #999999;
+    padding-top:10px;
+    padding-bottom:10px;
+    color:#ffffff;
+    font-weight: 500;
+    font-size:13px;
+    margin-top:-16px;
+}
+
+.btn_checkout{
+    background-color: #ff6d00;
+    padding:5px;
+    border-radius:8px;
+    width:80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top:5px;
+    margin-bottom: 5px;
+    color:#ffffff;
+    padding-top:13px;
+    padding-bottom: 13px;
+    border-radius: 20px;
+}
+
+.btn_checkout i {
+    margin-right:5px;
+    font-size:18px;
+    margin-left: -10px;
+}
+
+.presencial {
+    display:inline-flex;
+    width:100%;
+    padding-left:15px;
+    color:#5c5c5c;
+    font-size:14px;
+}
+
+.presencial .icone{
+    margin-right:10px;
+}
+
+.inputs {
+    padding-left:15px;
+    font-size:14px;
+    color:#5c5c5c;
+}
+
+.widget {
+    border-radius: 3px;
+    padding:10px;
+    padding-top:8px;
+    padding-bottom:8px;
+    width:100%;
+    margin:0 auto;
+    line-height:55px;
+    background-color:white;
+    -webkit-box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.17);
+    -moz-box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.17);
+    box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.17);
+    margin-bottom:23px;
+    color:#393939;
+}
+
+.widget .titulo{
+    display:inline-flex;
+    color:#0388c8;
+    padding-left:15px;
+}
+
+.widget .titulo .icone{
+    margin-right:8px;
+    font-size:20px;
+}
+
+
+.duracao{
+    display:inline-flex;
+    padding-left:18px;
+  }
+  
+  .duracao .icone{
+    margin-right:8px;
+    font-size:18px;
+    color:#5c5c64;
+  }
+  .duracao .texto{
+    color:#6b6b6b;
+    font-size:15px;
+    font-weight: 500;
+  }
+
+  .contados .titulo{
+      padding: 0px;
+      margin:0px;
+  }
+
+  .divisor{
+      margin:0 auto;
+      margin-top:3px;
+      margin-bottom: 3px;
+      position: relative;
+      width: 98%;
+      border-bottom: 1px solid #e2e2e2;
+  }
+
+  .contados_titulo .titulo{
+    padding-left:18px;
+    color:#6b6b6b;
+}
+.contados_titulo .titulo .icone{
+    font-size:16px;
+}
+.contados_titulo .titulo .texto{
+    font-weight:300;
+    font-size:12px;
+    margin-top:1px;
+}
+
+.contato{
+    width:90%;
+    margin: 0 auto;
+}
+
+.contato .nome{
+    font-weight: 300;
+    font-size:17px;
+    line-height:20px;
+    padding-left:22px;
+    margin-bottom: 15px;
+    color:#6b6b6b;
+}
+
+.contato .numeros{
+    width:100%;
+    display:grid;
+    margin-bottom: 10px;
+}
+
+.contato .numeros .numero_cont{
+    display:inline-flex;
+    width:100%;
+    line-height:20px;
+    margin-top:0px;
+    margin-bottom: 10px;
+
+}
+.contato .numeros .numero_cont .numero{
+    color:#5f5f5f;
+    width:90%;
+    font-size:14px;
+    padding-left:30px;
+}
+.contato .numeros .numero_cont .icone{
+
+    margin-top:-5px;
+    font-size:22px;
+    color:#2196f3;
+}
+
+.local_titulo .titulo{
+  padding-left:18px;
+  color:#6b6b6b;
+}
+.local_titulo .titulo .icone{
+  font-size:16px;
+}
+.local_titulo .titulo .texto{
+  font-weight:300;
+  font-size:12px;
+  margin-top:1px;
+}
+.local .conteudo{
+    width: 80%;
+    color:#6b6b6b;
+    margin:0 auto;
+}
+.local .endereco{
+    font-size:14px;
+    line-height: 20px;
+}
+.local .distancia{
+    line-height: 20px;
+    font-size:14px;
+}
+
+.local .btn_comochegar{
+
+   width:82%;margin: 0 auto;
+}
+.local .btn_comochegar .btn{
+    display:inline-flex;
+}
+
+.local  .como_chegar{
+    border-radius:20px;
+    background-color:#2196f3;
+    text-align:center;
+    line-height:10px;
+    color:#ffffff;
+    font-size:16px;
+    padding-top:7px;
+    padding-bottom: 7px;
+    margin-top:5px;
+    display:flex;
+    width:100%;
+}
+.local .btn_comochegar .icone{
+    font-size:20px;
+    margin-right:5px;
+}
+.local .texto{
+    padding-top:5px;
+}
+
+.informacoes_widget{
+    padding-top:6px;
+    padding-bottom:15px;
+}
+
+.informacoes_widget span{
+    font-size:19px;
+    color:#232323;
+    font-weight: 400;
+}
+
+.informacoes_widget {
+    font-size:21px;
+    padding-right:10px;
+    color:#6b6b6b;
+}
+
+.referencias .titulo{
+    font-size:12px;
+    color:#6b6b6b;
+    line-height:30px;
+}
+
+.referencias .descricao{
+    color:#6b6b6b;
+    line-height: 20px;
+}
+
+.informacoes .divisor{
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+
+.informacoes_adicionais .titulo{
+    font-size:12px;
+    color:#6b6b6b;
+    line-height:30px;
+}
+
+.informacoes_adicionais .descricao{
+    color:#6b6b6b;
+    line-height: 20px;
+}
+.lista_sla_categorias{
+   
+    width:100%;
+}
+ .lista_slas {
+    display:inline-flex;
+    width:100%;
+    
+}
+ .lista_slas .categoria{
+    border-radius:10px;
+    padding:5px;
+    font-size:12px;
+    background-color:#E7E7E7;
+    color:#8A8A8A;
+    margin-right:3px;
+    line-height: 20px;
+    margin-top: 0px;
+    float:left;
+}
+
+.btn_cancelaratendimento{
+    width: 80%;
+    text-align: center;
+    padding-top:11px;
+    padding-bottom:11px;
+    background-color:#FE3333;
+    color:#ffffff;
+    margin: 0 auto;
+    font-size:14px;
+    border-radius:20px;
+}
+
+.fotos {
+    display: inline-flex;
+}
+
+.fotos .foto {
+   
+    width:100%;
+    height:120px;
+    padding-bottom: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.fotos .foto img{
+    width:100%;
+    height:100%;
+}
+.form_observacoes{
+    overflow: hidden;
+}
+.form_observacoes select{
+    width:100%;
+    font-size:16px;
+    padding-left:5px;
+    background-color:#f5f5f5;
+    height:40px;
+    color:#8a828b;
+    border:0px solid transparent;
+    margin-top:10px;
+    border-bottom: 1px solid #8d8d8d;
+    outline:none;
+}
+
+.form_observacoes textarea{
+    line-height:20px;
+    width:100%;
+    border:0px;
+    padding:5px;
+    background-color: #e1e1e1;
+    color:#6b6b6b;
+    border-bottom: 1px solid #8d8d8d;
+    outline:none;
+}
+
+.form_observacoes .btn{
+    float:right;
+    border-radius: 18px;
+    background-color: #43a047;
+    position: relative;
+    height:40px;
+    width:120px;
+    font-size:13px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 40px;
+    color:white;
+}
+
+
+.form_observacoes .btn i{
+    margin-right:5px;
+    margin-left:-5px;
+}
+.form_sendcliente .cont{
+    width:100%;
+    display:grid;
+}
+.form_sendcliente .opcao{
+    width:100%;
+    display:inline-flex;
+    font-weight: 400;
+    margin-top:5px;
+    margin-bottom: 5px;
+    line-height: 30px;
+    color:#5f5f5f;
+}
+
+.form_sendcliente .opcao .input{
+    padding-left:15px;
+    padding-right:13px;
+}
+
+.btn_assinatura{
+    background-color: #43a047;
+    padding:5px;
+    border-radius:8px;
+    width:75%;
+    height:40px;
+    font-size:14px;
+    line-height:30px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top:22px;
+    margin-bottom: 22px;
+    color:#ffffff;
+    border-radius: 20px;
+}
+
+.btn_assinatura i {
+    margin-right:5px;
+    font-size:18px;
+    margin-left: -10px;
+}
+
+.btn_confirmar {
+    width:90%;
+    margin: 0 auto;
+    font-size:16px;
+    font-weight: 300;
+    background-color: #FE3333;
+    padding:5px;
+    border-radius:8px;
+    text-align: center;
+    margin-top:5px;
+    margin-bottom: 5px;
+    color:#ffffff;
+    padding-top:13px;
+    padding-bottom: 13px;
+    border-radius: 30px;
+}
+
+.btn_cadastrarcliente{
+    padding-left:33px;
+    padding-right: 33px;
+    height:38px;
+    line-height: 38px;
+    font-size:14px;
+    background-color:#43a047;
+    text-align: center;
+    float:left;
+    border-radius:25px;
+    margin-top:5px;
+    font-weight: 400;
+    color:white;
+}
+
+.widget .formulario select{
+    width:100%;
+    font-size:16px;
+    padding-left:5px;
+    background-color:#f5f5f5;
+    height:40px;
+    color:#8a828b;
+    border:0px solid transparent;
+    margin-top:10px;
+    border-bottom: 1px solid #8d8d8d;
+    outline:none;
+}
+
+.widget .formulario input{
+    width:100%;
+    font-size:16px;
+    padding-left:5px;
+    background-color:#f5f5f5;
+    height:40px;
+    color:#8a828b;
+    border:0px solid transparent;
+    margin-top:10px;
+    border-bottom: 1px solid #8d8d8d;
+    outline:none;
+}
+
+
+.widget .formulario textarea{
+    line-height:20px;
+    width:100%;
+    border:0px;
+    padding:5px;
+    background-color:#f5f5f5;
+    color:#6b6b6b;
+    border-bottom: 1px solid #8d8d8d;
+    outline:none;
+}
+
+.btn_cadastraratendimento{
+    height:45px;
+    line-height: 45px;
+    font-size:16px;
+    width:80%;
+    margin: 0 auto;
+    background-color:#43a047;
+    text-align: center;
+    border-radius:25px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color:white;
+    margin-top:20px;
+    -webkit-box-shadow: 2px 1px 15px 2px rgba(0,0,0,0.2); 
+box-shadow: 2px 1px 15px 2px rgba(0,0,0,0.2);
+}

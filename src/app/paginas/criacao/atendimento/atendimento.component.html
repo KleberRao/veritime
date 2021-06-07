@@ -1,0 +1,137 @@
+<ion-content class="background">
+
+  <ion-grid class="ion-no-padding cabecalho">
+    <!-- Cabeçalho -->
+    <ion-row>
+      <ion-col size="12">
+      <div style="background-color: #cff143;height:2px;width:100%;"></div>
+      <div style="background-color: #cbcbcb;width:100%;-webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.11);
+      -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.11);
+      box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.35);padding-top:10px;padding-bottom: 6px;" class="ion-padding-start ion-padding-end" >
+     <div>
+     <ion-row >
+        <ion-col size="1" style="padding-top:8px;" (click)="voltarAtras()">
+        <i class="fas fa-chevron-left"></i>
+        </ion-col>
+        <ion-col size="7">
+          <div class="page_title">Cadastrar Atendimento</div>
+        </ion-col>
+      </ion-row></div>
+    </div>
+    </ion-col>
+    </ion-row>
+    
+    <div class="container ion-padding-start ion-padding-end ion-padding-top">
+      
+      <div class="informacoes_widget">
+        <ion-row>
+          <span>
+            Informações do Cliente
+          </span>
+       
+        </ion-row>
+      </div>
+      <div class="widget informacoes">
+        <div  class="referencias">
+        <div class="form_observacoes">
+          <select>
+            <option>Nome do Cliente</option>
+          </select>
+          <div class="btn_cadastrarcliente" (click)="irAte('/criar/cliente')">CADASTRAR CLIENTE</div>
+          
+          
+        </div>
+      </div>
+      </div>
+    
+      <div class="informacoes_widget">
+        <ion-row>
+          <span>
+           Informações do Atendimento
+          </span>
+       
+        </ion-row>
+      </div>
+      <div class="widget informacoes">
+      <div class="referencias">
+          <div class="formulario">
+            <input type="text" placeholder="Título">
+            <input type="text" placeholder="Referência">
+            <textarea placeholder="Informações Adicionais e Instruções" rows="4"></textarea>
+            <select>
+              <option>Categorias</option>
+            </select>
+            <input type="text" placeholder="Data Agendada">
+            <input type="text" placeholder="Data Prevista">
+          </div>
+      </div>
+    </div>
+
+    
+    <div class="informacoes_widget">
+      <ion-row>
+        <span>
+         Local
+        </span>
+     
+      </ion-row>
+    </div>
+    <div class="widget informacoes">
+    <div class="referencias">
+        <div class="formulario">
+          <select>
+            <option>Tipo de Endereço</option>
+          </select>
+          <span>Selecione o endereço</span>
+        </div>
+    </div>
+  </div>
+ 
+  <div class="informacoes_widget">
+    <ion-row>
+      <span>
+        Equipe Externa
+      </span>
+   
+    </ion-row>
+  </div>
+  <div class="widget informacoes">
+  <div class="referencias">
+      <div class="formulario">
+        <select>
+          <option>Colaboradores</option>
+        </select>
+      </div>
+  </div>
+</div>
+
+<div class="informacoes_widget">
+  <ion-row>
+    <span>
+      Controle de Status
+    </span>
+ 
+  </ion-row>
+</div>
+<div class="widget informacoes">
+<div class="referencias">
+    <div class="formulario">
+      <select>
+        <option>Status</option>
+      </select>
+    </div>
+</div>
+</div>
+
+    
+      
+    
+    </div>
+<div class="btn_cadastraratendimento">Cadastrar atendimento</div>
+
+
+
+    <div class="final_page" style="height:100px;width:100%;"></div>
+    <app-menu></app-menu>
+  </ion-grid>
+</ion-content>

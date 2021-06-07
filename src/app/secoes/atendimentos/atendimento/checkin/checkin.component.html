@@ -1,0 +1,215 @@
+<ion-row>
+  <ion-col size="12" class="ion-padding-top ion-padding-bottom">
+    <div class="btn_checkin" (click)="checkin()"> 
+      <i class="fas fa-check"></i>
+      CHECK-IN
+    </div>
+  </ion-col>
+</ion-row>
+
+<div *ngIf="atendimento" class="container ion-padding-start ion-padding-end">
+  <div class="widget">
+  <ion-row>
+    <ion-col size="4">
+      <div class="presencial">
+       <div class="icone"> <i class="fas fa-map-marker-alt"></i></div>
+      <div class="texto">PRESENCIAL</div>
+      </div>
+    </ion-col>
+    <ion-col size="6" offset="2">
+      <div class="inputs">
+      <label style="margin-right:20px;">
+        <input *ngIf="atendimento.presencial == 'sim'" type="radio" name="presencial" value="sim" checked>
+        <input *ngIf="atendimento.presencial !== 'sim'" type="radio" name="presencial" value="sim">
+        SIM
+      </label>
+      <label>
+        <input *ngIf="atendimento.presencial !== 'sim'" type="radio" name="presencial" value="nao" checked>
+        <input *ngIf="atendimento.presencial == 'sim'" type="radio" name="presencial" value="nao">
+        NÃO
+      </label>
+    </div>
+    </ion-col>
+  </ion-row>
+  </div>
+
+  
+<!-- <i class="fas fa-map-marker-alt"></i> -->
+<!-- <i class="fas fa-user"></i> -->
+<!-- <i class="fas fa-clock"></i> -->
+<div class="widget">
+  <div class="widget_title">
+  <ion-row>
+    <ion-col size="11">
+      <div class="titulo">
+        <div class="icone"><i class="far fa-clock"></i></div>
+        <div class="texto">03/05/21 - 08:30 - 09:00</div>
+      </div>
+    </ion-col>
+    <ion-col size="1">
+      <i class="fas fa-chevron-up"></i>
+    </ion-col>
+  </ion-row>
+</div>
+<div class="divisor"></div>
+<div class="duracao">
+  <div class="icone"> <i class="far fa-clock"></i></div>
+  <div class='texto'>Duração <b>(00:30)</b></div>
+</div>
+<div class="contados">
+  <div class="divisor"></div>
+  <div class="contados_titulo">
+    <ion-row>
+      <ion-col size="11">
+        <div class="titulo">
+          <div class="icone"><i class="fas fa-user"></i></div>
+          <div class="texto">CONTATOS(S)</div>
+        </div>
+      </ion-col>
+      <ion-col size="1">
+        <i class="fas fa-chevron-up"></i>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div *ngIf="atendimento !== undefined"  >
+    <div *ngFor="let contato of atendimento.contatos let i = index" class="contato">
+    <div class="nome">{{ contato.nome }}</div>
+    <div class="numeros">
+      <div class="numero_cont" *ngIf="contato.telefone !== ''">
+        <div class="numero" >{{ contato.telefone }}<span *ngIf="contato.ramal !== '' ">  - Ramal</span> {{ contato.ramal }}</div>
+        <div class="icone"><i class="fas fa-phone-volume"></i></div>
+      </div>
+      <div class="numero_cont" *ngIf="contato.celular !== ''">
+        <div class="numero">{{ contato.celular }} </div>
+        <div class="icone"><i class="fas fa-phone-volume"></i></div>
+      </div>
+    </div>
+    <div class="divisor" style="margin-bottom: 10px;width:85%;"></div>
+  </div>
+</div>
+
+</div>
+<div  *ngIf="atendimento !== undefined" class="local">
+  <div class="local_titulo">
+    <ion-row>
+      <ion-col size="11">
+        <div class="titulo">
+          <div class="icone"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="texto">LOCAL</div>
+        </div>
+      </ion-col>
+      <ion-col size="1">
+        <i class="fas fa-chevron-up"></i>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div class="conteudo">
+    <div class="endereco">{{ atendimento.endereco_completo }}</div>
+    <div class="distancia">1000m</div>
+    <div class="como_chegar">
+      <div class="btn_comochegar"><div class="btn"><div class="icone"><i class="fas fa-directions"></i></div> <div class="texto">VER COMO CHECAR</div></div></div>
+    </div>
+  </div>
+</div>
+  
+</div>
+
+
+<div class="informacoes_widget">
+  <ion-row>
+    <ion-col size="5"><span>Informações</span></ion-col>
+    <ion-col size="1" offset="6">
+      <i class="fas fa-chevron-up"></i></ion-col>
+  </ion-row>
+</div>
+<div class="widget informacoes">
+  <div *ngIf="atendimento" class="referencias">
+  <ion-row>
+    <ion-col size="11">
+      <div class="titulo">
+        <div class="texto">REFERÊNCIA</div>
+      </div>
+    </ion-col>
+    <ion-col size="1">
+      <i class="fas fa-chevron-up"></i>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="10" offset="1">
+      <div *ngIf="atendimento.referencia" class="descricao">{{ atendimento.referencia }}</div>
+    </ion-col>
+  </ion-row>
+  <div class="divisor"></div>
+</div>
+
+
+<div *ngIf="atendimento && atendimento.observacao !== null" class="informacoes_adicionais">
+  <ion-row>
+    <ion-col size="11">
+      <div class="titulo">
+        <div class="texto">INFORMAÇÕES ADICIONAIS E INSTRUÇÕES</div>
+      </div>
+    </ion-col>
+    <ion-col size="1">
+      <i class="fas fa-chevron-up"></i>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="10" offset="1">
+      <div  class="descricao">
+        <span>{{ atendimento.observacao }}</span>
+      </div>
+    </ion-col>
+  </ion-row>
+  <div class="divisor"></div>
+</div>
+
+<div *ngIf="atendimento && atendimento.indicador_sla !== null" class="informacoes_adicionais">
+  <ion-row>
+    <ion-col size="11">
+      <div class="titulo">
+        <div class="texto"><B>SLA</B> INDICADOR DE PRAZO</div>
+      </div>
+    </ion-col>
+    <ion-col size="1">
+      <i class="fas fa-chevron-up"></i>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="10" offset="1">
+      <div  class="descricao">
+        <span>{{ atendimento.indicador_sla }}</span>
+      </div>
+    </ion-col>
+  </ion-row>
+  <div class="divisor"></div>
+</div>
+
+<div *ngIf="atendimento && atendimento.categorias !== null" class="informacoes_adicionais">
+  <ion-row>
+    <ion-col size="11">
+      <div class="titulo">
+        <div class="texto">CATEGORIAS(S)</div>
+      </div>
+    </ion-col>
+    <ion-col size="1">
+      <i class="fas fa-chevron-up"></i>
+    </ion-col>
+  </ion-row>
+  <ion-row >
+    <ion-col size="10" offset="1" >
+      <div class="lista_sla_categorias"  >
+        <div class="lista_slas" >
+          <div *ngFor="let categoria of atendimento.categorias let ix = index" class="categoria">
+            {{ categoria }}
+            </div>
+      </div>
+    </div>
+    </ion-col>
+  </ion-row>
+</div>
+
+
+</div>
+
+<div class="btn_cancelaratendimento" (click)="cancelarAtendimento()">CANCELAR ATENDIMENTO</div>

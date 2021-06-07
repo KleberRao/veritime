@@ -1,0 +1,63 @@
+.jornada_titulo{
+    font-size:22px;
+    color:#767676;
+}
+.jornada {
+    color:#767676;
+    
+    margin-bottom:10px;
+    border-radius: 3px;
+    padding:15px;
+    width:100%;
+    background-color:white;
+    -webkit-box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.17);
+-moz-box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.17);
+box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.17);
+}
+.jornada .data{
+    padding:5px;
+    font-weight:bold;
+    color:#858585;
+    margin-left:20px;
+    font-size:18px;
+}
+.jornada .dia{
+    margin-left:25px;
+    font-size:13px;
+    color:#858585;
+}
+
+.jornada .contador{
+    display:inline-flex;
+    float:right;
+    margin-right:35px;
+    color:#5c5c5c;
+}
+
+.jornada .contador h1{
+    font-size:50px;
+    margin-top:-5px;
+}
+.jornada .contador small{
+    margin-top:20px;
+}
+
+.divisor{
+    width:85%;
+    background-color:#e2e2e2;
+    height:1.2px;
+    margin: 0 auto;
+    margin-top:3px;
+    margin-bottom: 15px;
+}
+
+.jtd{
+    padding-left:5px;
+    color:#615c5c;
+    font-weight: 500;
+}
+.jtd i{
+    color:#615c5c;
+    margin-right:10px;
+}
+

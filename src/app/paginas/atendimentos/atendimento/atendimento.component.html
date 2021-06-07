@@ -1,0 +1,31 @@
+<ion-content class="background">
+
+  <ion-grid class="ion-no-padding cabecalho">
+    <!-- Cabeçalho -->
+    <ion-row>
+      <ion-col size="12">
+      <div style="background-color: #cff143;height:2px;width:100%;"></div>
+      <div style="background-color: #cbcbcb;width:100%;-webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.11);
+      -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.11);
+      box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.35);padding-top:10px;padding-bottom: 6px;" class="ion-padding-start ion-padding-end" >
+     <div *ngIf="atendimento !== undefined">
+     <ion-row >
+        <ion-col size="2" style="padding-top:8px;" (click)="voltarAtras()">
+        <i class="fas fa-chevron-left"></i>
+        </ion-col>
+        <ion-col size="7">
+          <div class="page_title">{{ atendimento.titulo }} </div>
+          <div class="page_desc">{{ atendimento.nome_cliente }}</div>
+        </ion-col>
+      </ion-row></div>
+    </div>
+    </ion-col>
+    </ion-row>
+    <app-checkin *ngIf="atendimento && atendimento.data_hora_checkin == null &&  atendimento.data_hora_checkout == null && checkout == false && cancelamento == false"></app-checkin>
+    <app-poscheckin *ngIf="atendimento && atendimento.data_hora_checkin !== null &&  atendimento.data_hora_checkout == null && checkout == false && cancelamento == false"></app-poscheckin>
+    <app-checkout *ngIf="checkout == true && cancelamento == false"></app-checkout>
+    <app-cancelamento *ngIf="checkout == false && cancelamento == true"></app-cancelamento>
+    <div class="final_page" style="height:100px;width:100%;"></div>
+    <app-menu></app-menu>
+  </ion-grid>
+</ion-content>

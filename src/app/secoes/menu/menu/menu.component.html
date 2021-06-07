@@ -1,0 +1,53 @@
+<div *ngIf="divRoot == true" class="adicionar" (click)="abrirAdicionar()">
+  <i class="fas fa-plus"></i>
+</div>
+<div *ngIf="divAdicionar !== false" class="adicionar_tipo">
+  <div class="lista">
+    <div class="tipo" (click)="irAte('cliente')">
+      <div class="icone"><i class="far fa-address-book"></i></div>
+      <div class="texto">Cliente</div>
+    </div>
+    <div class="tipo" (click)="irAte('atendimento')">
+      <div class="icone"><i class="fas fa-clipboard"></i></div>
+      <div class="texto">Atendimento</div>
+    </div>
+  </div>
+  <div class="final"><i class="fas fa-plus"></i> ADICIONAR</div>
+</div>
+<div *ngIf="divAdicionar !== false" class="fundo" (click)="abrirAdicionar()"></div>
+<div class="menu">
+  <div class="botao">
+    <div class="icone">
+      <i class="fas fa-sync-alt"></i>
+    </div>
+    <div class="texto">
+      Sincronizar
+    </div>
+  </div>
+
+  <div class="botao"  (click)="menu('minha_lista')">
+    <div class="icone">
+      <i class="fas fa-clipboard"></i>
+    </div>
+    <div class="texto">
+      Minha Lista
+    </div>
+  </div>
+  <div class="botao"  (click)="menu('jornada')">
+    <div class="icone">
+      <i class="far fa-clock"></i>
+    </div>
+    <div class="texto" >
+      Jornada
+    </div>
+  </div>
+  <div class="botao">
+    <div class="icone">
+      <i class="fas fa-map-marker-alt"></i>
+    </div>
+    <div class="texto">
+      Meu Local
+    </div>
+  </div>
+  
+</div>

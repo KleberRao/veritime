@@ -1,0 +1,117 @@
+.menu{
+    width:100%;
+    height:90px;
+    position: fixed;
+    bottom:0px;
+    display:inline-flex;
+    padding:6px;
+    padding-bottom: 8px;
+    background-color:#e1e1e1;
+}
+
+.menu .botao{
+    background-color: #c9c9c9;
+    margin-left:3px;
+    margin-right: 3px;
+    border-radius: 5px;;
+    width:100%;
+    -webkit-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.3); 
+    box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.3);
+    color:black;
+}
+
+.menu .botao .icone{
+    height:58px;
+    width:100%;
+    font-size:30px;
+    color:#515151;
+    padding-top:15px;
+    text-align: center;
+}
+
+.menu .botao .texto{
+    text-align: center;
+    font-size:13px;
+}
+
+.adicionar {
+    z-index: 9;
+    position: fixed;
+    bottom:100px;
+    right:20px;
+    background-color:#cff143;
+    font-size:20px;
+    height:60px;
+    width:60px;
+    color:#515151;
+    line-height:60px;
+    text-align: center;
+    border-radius: 40px;
+    -webkit-box-shadow: 2px 2px 15px 5px rgba(0,0,0,0.31); 
+    box-shadow: 2px 2px 15px 5px rgba(0,0,0,0.31);
+}
+
+.adicionar_tipo{
+    z-index: 9;
+    border-radius:10px;
+    padding-top:25px;
+    position: fixed;
+    bottom:120px;
+    right:50px;
+    background-color:white;
+    width:210px;
+}
+
+.adicionar_tipo .lista{
+    margin-left:20px;
+}
+.adicionar_tipo .lista .tipo{
+    margin-bottom:9px;
+    width:100%;
+    display: inline-flex;
+}
+.adicionar_tipo .lista .tipo .icone{
+    background-color:#cff143;
+    font-size:20px;
+    height:40px;
+    width:40px;
+    color:#515151;
+    line-height:40px;
+    text-align: center;
+    border-radius: 90px;
+    -webkit-box-shadow: 1px 1px 13px 2px rgba(0,0,0,0.18); 
+box-shadow: 1px 1px 13px 2px rgba(0,0,0,0.18);
+    margin-right: 10px;
+}
+
+.adicionar_tipo .lista .tipo .texto{
+    margin-top:10px;
+    margin-left:5px;
+    color:#5c5c5c;
+    font-size:18px;
+    font-weight: 300;
+}
+
+.adicionar_tipo .final{
+    background-color:#cff143;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    font-size:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    color:#5e5e5e;
+}
+.adicionar_tipo .final i{
+    margin-right:10px;
+    margin-left:-5px;
+}
+
+.fundo{
+    top:0px;
+    left:0px;
+    position:fixed;
+    height:100%;width:100%;
+    background-color: black;
+    opacity: 0.4;
+}

@@ -1,0 +1,153 @@
+.filtrar_atendimentos{
+    font-family: 'Arial';
+    color:#767676;
+}
+
+.filtrar_atendimentos .data{
+    color:#767676;
+    font-size:14px;
+}
+
+.secoes_atendimentos{
+}
+.ordernar{
+    background-color:#F16F6F;
+    border-radius: 90px;
+    width:60px;
+    height:60px;
+    margin: 0 auto;
+    margin-top:-8px;
+    padding-top:8px;
+    justify-content: center;
+}
+
+.divlistarAtendimentos{
+    z-index: 99;
+    padding:15px;
+    padding-right:35px;
+    border-radius:7px;
+    padding-left:25px;
+    position:absolute;
+    right:30px;
+    margin-top:-15px;
+    background-color:white;
+    -webkit-box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.17);
+    -moz-box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.17);
+    box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.17);
+}
+
+.divlistarAtendimentos .elemento .icone{
+    height:20px;
+    width:20px;
+}
+.divlistarAtendimentos .titulo{
+    font-weight: 500;
+    font-size:14px;
+    color:#665c5c;
+    margin-bottom: 8px;
+}
+.divlistarAtendimentos .elemento{
+    color:#5c5c5c;
+    width:75%;
+    font-weight: 300;
+    margin: 0 auto;
+    padding-top:5px;
+    padding-bottom: 5px;
+    margin-left:10px;
+}
+
+.divlistarAtendimentos .elemento .icone{
+    float:left;
+}
+
+.secoes_atendimentos .secao_atendimento{
+    margin-bottom:10px;
+    border-radius: 3px;
+    padding:15px;
+    width:100%;
+    height:85px;
+    line-height:55px;
+    background-color:white;
+    -webkit-box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.17);
+-moz-box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.17);
+box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.17);
+}
+
+.secoes_atendimentos .secao_atendimento .tipo{
+    width:100%;
+    text-align: left;
+    margin-left:15px;
+    color:#858585;
+    font-size:18px;
+}
+.secoes_atendimentos .secao_atendimento .contagens{
+    display:inline-flex;
+    width: 100%;
+    justify-content: flex-end;
+  
+}
+.secoes_atendimentos .secao_atendimento .contagem{
+    color:#6c7377;
+    font-family: 'Arial';
+    font-weight: 600;
+    width:50px;
+    text-align: center;
+    height:45px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    line-height: 45px;
+    margin-top:2px;
+    margin-left:5px;
+    
+}
+
+
+.contagem_verde{
+    background-color:#bfdbc0;
+    border-left:4px solid #43a047;
+}
+.contagem_vermelho{
+    background-color:#eec0bb;
+    border-left:4px solid #f44336;
+}
+
+.contagem_azul{
+    background-color:#abdaf0;
+    border-left:4px solid #039be8;
+}
+
+.contagem_cinza{
+    background-color:#d3d3d3;
+    border-left:4px solid #90a4ae;
+}
+.contagem_laranja{
+    background-color:#f3be77;
+    border-left:4px solid #ffab00;
+}
+
+.secoes_atendimentos .secao_atendimento .icone{
+    width:100%;
+    line-height:50px;
+}
+.seta {
+    position: absolute;
+    padding: 0.3rem; /* Arrow size */
+            box-shadow: 1px -1px 0 1px #999999 inset;
+    -webkit-box-shadow: 2px -2px #999999 inset;
+    border: solid transparent;
+    border-width: 0 0 1rem 1rem;
+    transition: 0.2s;
+    margin-left:10px;
+    margin-top:14px;    
+  }
+  
+  .seta-direita { transform:rotate(225deg) }
+  .dots{
+      width:13px;
+      margin: 0 auto;
+  }
+  .dots::after {
+    content: '\2807';
+    font-size: 30px;
+    text-align: right;
+    }

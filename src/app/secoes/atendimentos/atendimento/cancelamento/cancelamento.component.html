@@ -1,0 +1,62 @@
+<ion-row>
+  <ion-col size="12" class="ion-padding-top ion-padding-bottom">
+    <div class="titulo_cabecalho">
+       CANCELAMENTO
+    </div>
+  </ion-col>
+</ion-row>
+
+<div *ngIf="atendimento" class="container ion-padding-start ion-padding-end">
+  
+  <div class="informacoes_widget">
+    <ion-row>
+      <span>
+       Observações da visita
+      </span>
+   
+    </ion-row>
+  </div>
+  <div class="widget informacoes">
+    <div *ngIf="atendimento" class="referencias">
+    <div class="form_observacoes">
+      <select>
+        <option>Observações Predefinidas</option>
+      </select>
+      <textarea>
+        
+      </textarea>
+      
+    </div>
+  </div>
+  </div>
+
+  <div class="informacoes_widget">
+    <ion-row>
+      <span>
+       Enviar para o cliente
+      </span>
+   
+    </ion-row>
+  </div>
+  <div class="widget informacoes">
+    <div *ngIf="atendimento" class="referencias">
+    <div class="form_sendcliente">
+      <div class="cont">
+      
+        <div class="opcao">
+        <div class="input"><input type="checkbox"></div>
+        <div class="texto">Observações da visita</div>
+      </div> 
+      
+
+      
+    </div>
+  </div>
+</div>
+</div>
+
+  
+
+
+  <div class="btn_confirmar">CANCELAR ATENDIMENTO</div>  
+</div>

@@ -1,0 +1,205 @@
+
+<div class="container ion-padding-start ion-padding-end">
+  
+  <div *ngFor="let atendimento_content of atendimentos let dia = index">
+    <div *ngFor="let atendimento of atendimento_content let i = index" (click)="toggleAtendimentoDia(dia)">
+      <ion-row  *ngIf="atendimento !== null && i == 0" class="ion-padding">
+       
+      <ion-col size="10">
+        <div *ngIf="atendimento.data_agendada !== undefined" class="data_listagem">{{atendimento.data_agendada | date: 'dd/MM/YYYY' }} - {{ obterData(atendimento.data_agendada | date: 'EEEE')}}
+        </div>
+      </ion-col>
+      <ion-col size="2">
+        <div  *ngIf="atendimento_content !== undefined" class="filtro_data"><div class="quantidade">+{{ atendimento_content.length }}</div><div class="icone"><i class="fas" [ngClass]="{'fa-chevron-up' : atendimento_content.exibir == 'true','fa-chevron-down' : atendimento_content.exibir == 'false'}"></i></div></div>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div *ngFor="let atendimento of atendimento_content let i = index" class="atendimento_{{ atendimento.idatendimento }}">
+    <div *ngIf="atendimento.data_hora_checkout !== null && atendimento_content.exibir == 'true'" class="atendimento_checkout">
+     <div class="icone"><i class="fas fa-check-double"></i></div>
+     <div class="texto">Check-out em {{atendimento.data_hora_checkout | date: 'dd/MM/YYYY' }} às {{atendimento.data_hora_checkout | date: 'HH:mm' }}</div>
+
+ </div>
+    <div *ngIf="atendimento_content.exibir == 'true'" class="atendimento">
+    <div  class="c_atendimento"  [ngClass]="{'ca_borda_verde' : atendimento.status_atendimento == 'em_andamento','ca_borda_azul' : atendimento.status_atendimento == 'em_espera','ca_borda_cinza' : atendimento.status_atendimento == 'finalizado','ca_borda_vermelho' : atendimento.status_atendimento == 'em_atraso'}">
+      <ion-row>
+        <ion-col size="6">
+          <div class="tempo_atendimento">
+            <div class="tempo">
+              <div class="icone">
+                <i class="far fa-clock"></i>
+              </div>
+              <div class="horario">{{ atendimento.hora_agendada }}</div>
+            </div>
+            <div class="data">{{ atendimento.data_agendada }}</div>
+          </div>
+        </ion-col>
+        <ion-col size="6">
+          <div *ngIf="atendimento.status_atendimento == 'em_andamento'" class="badge" [ngClass]="{'bgverde' : atendimento.status_atendimento == 'em_andamento'}">
+            <div *ngIf="atendimento.status_atendimento == 'em_andamento'">Em atendimento</div>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12"  (click)="verAtendimento(atendimento.idatendimento)">
+        <div class="cont_titulo">
+          <div class="titulo">{{ atendimento.titulo }}</div>
+          <div class="icone"><i class="fas fa-chevron-right" ></i></div>
+        </div>
+        <div class="nome_cliente"> {{ atendimento.nome_cliente }}</div>
+        </ion-col>
+      </ion-row>
+      <div class="divisor"></div>
+      <div *ngIf="atendimento.exibir == 'true'" class="lista_check">
+      <ion-row>
+          <div class="check">
+            <div class="icone"><i class="far fa-clock"></i></div>
+            <div class="texto">Duração</div>
+            <div class="descricao">{{ atendimento.tempo_estimado }}</div>
+          </div>
+          <div class="check" [ngClass]="{'check_opacidade' : atendimento.data_hora_checkin == null}">
+            <div class="icone"><i class="fas fa-check"></i></div>
+            <div class="texto">Check-in</div>
+            <div class="descricao">{{ atendimento.data_hora_checkin }}</div>
+          </div>
+          <div class="check" [ngClass]="{'check_opacidade' : atendimento.data_hora_checkout == null}">
+            <div class="icone"><i class="fas fa-check"></i></div>
+            <div class="texto">Check-out</div>
+            <div class="descricao">{{ atendimento.data_hora_checkout }}</div>
+          </div>
+         <div class="divisor"></div>
+      </ion-row>
+    </div>
+
+    
+    <div *ngIf="atendimento.exibir == 'true'" class="lista_contato">
+      <ion-row>
+          <div *ngIf="atendimento.contatos.length > 0" class="check">
+            <div class="icone"><i class="fas fa-user"></i></div>
+            <div class="texto">
+              <span >{{ atendimento.contatos[0].nome }}</span>
+            </div>
+            <div *ngIf="atendimento.contatos.length > 1" class="descricao qntcontatos">+{{ atendimento.contatos.length - 1 }}</div>
+          </div>
+          <div class="check" [ngClass]="{'check_opacidade' : atendimento.data_hora_checkin == null}">
+            <div class="icone"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="texto">{{ atendimento.endereco_completo }}</div>
+          </div>
+         <div class="divisor"></div>
+      </ion-row>
+    </div>
+    
+    <div *ngIf="atendimento.exibir == 'true'" class="lista_sla">
+      <ion-row>
+          <div class="check">
+            <div class="icone">SLA</div>
+            <div class="texto">
+              <span >{{ atendimento.indicador_sla }}</span>
+            </div>
+             </div>
+          <div class="lista_sla_categorias" >
+              <div *ngFor="let categoria of atendimento.categorias let ix = index" class="categoria">
+                {{categoria}}
+              </div>
+          </div>
+         <div class="divisor"></div>
+      </ion-row>
+    </div>
+      <div class="expandir" (click)="toggleAtendimento(dia,i)" style="width:100%;">
+      <ion-row>
+        <ion-col size="10">
+          <div class="distancia"><i class="fas fa-route"></i> <span>1m</span></div>
+        </ion-col>
+        <ion-col size="2">
+          <i class="fas" [ngClass]="{'fa-chevron-down' : atendimento.exibir == 'false','fa-chevron-up' : atendimento.exibir == 'true'}"></i>
+        </ion-col>
+      </ion-row></div>
+   
+     
+    </div>
+  </div>
+    
+  </div>
+</div>
+
+<!--
+
+  <div class="atendimento ">
+    <div class="c_atendimento ca_borda_vermelho">
+      <ion-row>
+        <ion-col size="6">
+          <div class="tempo_atendimento">
+            <div class="tempo">
+              <div class="icone">
+                <i class="far fa-clock"></i>
+              </div>
+              <div class="horario">10:30 - 12:00</div>
+            </div>
+            <div class="data">24/05/2021</div>
+          </div>
+        </ion-col>
+        <ion-col size="6">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <div class="cont_titulo">
+          <div class="titulo">Título Atendimento que pode ser bem grande</div>
+          <div class="icone"><i class="fas fa-chevron-right "></i></div>
+        </div>
+        <div class="nome_cliente">Nome do cliente</div>
+        
+      </ion-row>
+      <div class="divisor"></div>
+      <ion-row>
+        <ion-col size="10">
+          <div class="distancia"><i class="fas fa-route"></i> <span>800m</span></div>
+        </ion-col>
+        <ion-col>
+          <i class="fas fa-chevron-down "></i>
+        </ion-col>
+      </ion-row>
+    </div>
+    
+  </div>
+
+
+  
+
+  <div class="atendimento ">
+    <div class="c_atendimento ca_borda_azul">
+      <ion-row>
+        <ion-col size="6">
+          <div class="tempo_atendimento">
+            <div class="tempo">
+              <div class="icone">
+                <i class="far fa-clock"></i>
+              </div>
+              <div class="horario">15:00 - 16:00</div>
+            </div>
+            <div class="data">24/05/2021</div>
+          </div>
+        </ion-col>
+        <ion-col size="6">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <div class="cont_titulo">
+          <div class="titulo">Título Atendimento que pode ser bem grande</div>
+          <div class="icone"><i class="fas fa-chevron-right "></i></div>
+        </div>
+        <div class="nome_cliente">Nome do cliente</div>
+        
+      </ion-row>
+      <div class="divisor"></div>
+      <ion-row>
+        <ion-col size="10">
+          <div class="distancia"><i class="fas fa-route"></i> <span>3825m</span></div>
+        </ion-col>
+        <ion-col>
+          <i class="fas fa-chevron-down "></i>
+        </ion-col>
+      </ion-row>
+    </div>
+    
+  </div>  -->
+</div>
